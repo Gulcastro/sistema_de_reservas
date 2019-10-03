@@ -1,0 +1,8 @@
+from pessoa import Pessoa
+
+
+class Hospede(Pessoa):
+    def __init__(self, nome: str, idade: int, login: str, senha: str):
+                 super().__init__(self, nome: str, contato: str, idade: int, login: str, senha: str)
+        self.__reservas_anteriores = []
+        self.__reservas_ativas = []

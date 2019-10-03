@@ -1,0 +1,55 @@
+class ControladorPessoa():
+    def __init__(self):
+        self.__all_hospedes = []
+        self.__all_proprietarios = []
+
+    def alterar_nome(pessoa: Pessoa, nome): 
+        pessoa.nome = nome
+
+    def alterar_contato(pessoa: Pessoa, contato):
+        if contato in pessoa(contatos):
+            pessoa(contatos).pop(contato)
+            return True
+        else:
+            return False
+
+    def alterar_idade(pessoa: Pessoa, idade):
+        pessoa.idade = idade
+    
+    def cadastrar_proprietario(self, nome: str idade: int, login: str, senha: str):
+        novo_proprietario = Proprietario(nome, idade, login, senha)
+        for i in self.__all_proprietarios:
+            if i == novo_proprietario:
+            return False
+        else:
+            self.__all_proprietarios.append(novo_proprietario)
+            return True
+  
+    def cadastrar_hospede(self, nome: str, idade: int, login: str, senha: str):
+        novo_hospede = Hospede(nome, idade, login, senha)
+        for i in self.__all_hospedes:
+            if i == novo_hospede:
+                return False
+            else:
+                self.__all_hospedes.append(novo_hospede)
+        return True
+  
+    def excluir_pessoa(self, pessoa: Pessoa):
+        for i in self.__all_hospedes:
+            if i == pessoa:
+                self.__all_hospedes.pop(i)
+                return True
+            else:
+                for j in self.__all_proprietarios:
+                    if j == pessoa:
+                        self.__all_proprietarios.pop(j)
+                        return True
+                    else:
+                        return False
+
+    def adicionar_contato(self, pessoa: Pessoa, contato):
+        for i in pessoa(contatos):
+        if contato == i:
+            return False
+        pessoa(contatos).append(contato)
+        return True

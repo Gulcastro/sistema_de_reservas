@@ -1,0 +1,9 @@
+from pessoa import Pessoa
+
+
+class Proprietario(Pessoa):
+    def __init__(self, nome: str, idade: int, login: str, senha: str):
+                 super()__init__(self, nome: str, contato: str, idade: int, login: str, senha: str):
+        self.__numero_imoveis = 0
+        self.__lista_imoveis = []
+        self.__lista_reservas = []
